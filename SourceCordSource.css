@@ -1,0 +1,184 @@
+/**
+ * @name SourceCord
+ * @author Uwa x ClearVision Team
+ * @version 1.0.0
+ * @description Custom Source for my Discord themes
+ * @source https://github.com/ClearVision/ClearVision-v7
+ * @website https://clearvision.github.io
+ * @invite n/a
+ */
+/* IMPORT CSS */
+@import url("https://clearvision.github.io/ClearVision-v7/main.css");
+@import url("https://clearvision.github.io/ClearVision-v7/vencord.css");
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Slab:wght@100..900&display=swap');
+
+/* !SETTINGS */
+:root {
+  /* ACCENT COLORS */
+
+  --accent-light: #ccc;
+  --accent-dark: #444;
+  --main-text-color: #0f0;
+  --link-text-color: #f00;
+
+  --main-color: var(--accent-light); /* main accent color (hex, rgb or hsl) [default: #2780e6] */
+  --hover-color: #928f8a; /* hover accent color (hex, rgb or hsl) [default: #1e63b3] */
+  --success-color: #43b565; /* positive accent color (hex, rgb or hsl) [default: #43b581] */
+  --danger-color: #bd2929; /* danger accent color (hex, rgb or hsl) [default: #982929] */
+  /* STATUS COLORS */
+  --online-color: #43b565; /* online status color (hex, rgb or hsl) [default: #43b581] */
+  --idle-color: #faa61a; /* idle status color (hex, rgb or hsl) [default: #faa61a] */
+  --dnd-color: #bd2929; /* dnd status color (hex, rgb or hsl) [default: #982929] */
+  --streaming-color: #593695; /* streaming status color (hex, rgb or hsl) [default: #593695] */
+  --offline-color: #808080; /* offline/invisible status color (hex, rgb or hsl) [default: #808080] */
+  /* APP BACKGROUND */
+  --background-shading-percent: 10%; /* app background shading amount (0 for complete smoothness) [default: 100%] */
+  --background-image: var(--wallpaper-variant); /* app background image (link must be HTTPS) [default: url(https://clearvision.github.io/images/sapphire.jpg)]*/
+  --background-position: center; /* app background position [default: center] */
+  --background-size: cover; /* app background size (px) [default: cover] */
+  --background-attachment: fixed; /* app background attachment [default: fixed] */
+  --background-filter: blur(2px) saturate(calc(var(--saturation-factor, 1) * 1.25)); /* app background adjustments (ex: blur, saturation, brightness) (more info: https://developer.mozilla.org/en-US/docs/Web/CSS/filter) [default: saturate(calc(var(--saturation-factor, 1) * 1))] */
+  /* USER POPOUT BACKGROUND */
+  --user-popout-image: var(--background-image); /* user popout background image (link must be HTTPS) (not applied to nitro users) [default: var(--background-image)] */
+  --user-popout-position: var(--background-position); /* user popout position [default: var(--background-position)] */
+  --user-popout-size: var(--background-size); /* user popout size (px) [default: var(--background-size)] */
+  --user-popout-attachment: var(--background-attachment); /* user popout background attachment [default: var(--background-attachment)] */
+  --user-popout-filter: var(--background-filter); /* user popout background adjustments (ex: blur, saturation, brightness) (more info: https://developer.mozilla.org/en-US/docs/Web/CSS/filter) [default: var(--background-filter);] */
+  /* USER MODAL BACKGROUND */
+  --user-modal-image: var(--background-image); /* user modal background image (link must be HTTPS) (not applied to nitro users) [default: var(--background-image)] */
+  --user-modal-position: var(--background-position); /* user modal position [default: var(--background-position)] */
+  --user-modal-size: var(--background-size); /* user modal size (px) [default: var(--background-size)] */
+  --user-modal-attachment: var(--background-attachment); /* user modal background attachment [default: var(--background-attachment)] */
+  --user-modal-filter: var(--background-filter); /* user modal background adjustments (ex: blur, saturation, brightness) (more info: https://developer.mozilla.org/en-US/docs/Web/CSS/filter) [default: var(--background-filter);] */
+  /* HOME ICON */
+  --home-icon: url(about:blank); /* home button icon (link must be HTTPS) [default: url(https://clearvision.github.io/icons/discord.svg)]*/
+  --home-size: cover; /* home button icon size (px) [default:cover] */
+  /* FONTS */
+  --main-font: "Nunito", "Helvetica Neue", Helvetica, Arial, sans-serif; /* main font for app (font must be installed) [default: gg sans, Helvetica Neue, Helvetica, Arial, sans-serif] */
+  --code-font: Consolas, "gg mono", "Liberation Mono", Menlo, Courier, monospace; /* font for codeblocks (font must be installed) [default: Consolas, Liberation Mono, Menlo, Courier, monospace] */
+  /* CHANNEL COLORS */
+  --channel-normal: var(--interactive-text-default); /* channel text color [default: var(--interactive-text-default)] */
+  --channel-muted: var(--interactive-muted); /* muted channel text color [default: var(--interactive-muted)] */
+  --channel-hover: var(--interactive-text-hover); /* hovered channel text color [default: var(--interactive-text-hover)] */
+  --channel-selected: var(--interactive-text-active); /* selected channel text color [default: var(--interactive-text-active)] */
+  --channel-selected-bg: var(--main-color); /* selected channel background [default: var(--main-color)] */
+  --channel-unread: var(--main-color); /* unread channel text color [default: var(--main-color)] */
+  --channel-unread-hover: var(--hover-color); /* unread channel hover color [default: var(--hover-color)] */
+  /* --invite-icon: url(about:blank); an .svg file */
+  /* ACCESSIBILITY */
+  --focus-color: var(--main-color); /* outline when pressing TAB key [default: var(--main-color)] */
+  --interactive-text-active: var(--accent-dark);
+}
+
+/* THEME SPECIFIC SHADING */
+/* LIGHT THEME */
+:is(.theme-light, .theme-dark .theme-light) {
+  --background-shading: rgba(252, 252, 252, 0.3); /* app background shading color [default: rgba(252, 252, 252, 0.3)] */
+  --card-shading: rgba(252, 252, 252, 0.3); /* cards background shading color [default: rgba(252, 252, 252, 0.3)] */
+  --popout-shading: rgba(252, 252, 252, 0.7); /* popouts background shading color [default: rgba(252, 252, 252, 0.7)] */
+  --modal-shading: rgba(252, 252, 252, 0.5); /* modals background shading color [default: rgba(0, 0, 0, 0.6)] */
+  --input-shading: rgba(0, 0, 0, 0.3); /* inputs background shading color [default: rgba(0, 0, 0, 0.6)] */
+  --normal-text: #36363c; /* text color [default: #36363c] */
+  --muted-text: #75757e; /* muted text color [default: #75757e] */
+}
+
+/* ASH THEME */
+:is(.theme-dark, .theme-light .theme-dark) {
+  --background-shading: rgba(0, 0, 0, 0.4); /* app background shading color [default: rgba(0, 0, 0, 0.4)] */
+  --card-shading: rgba(0, 0, 0, 0.2); /* cards background shading color [default: rgba(0, 0, 0, 0.2)] */
+  --popout-shading: rgba(0, 0, 0, 0.6); /* popouts background shading color [default: rgba(0, 0, 0, 0.6)] */
+  --modal-shading: rgba(0, 0, 0, 0.4); /* modals background shading color [default: rgba(0, 0, 0, 0.4)] */
+  --input-shading: rgba(255, 255, 255, 0.05); /* inputs background shading color [default: rgba(255, 255, 255, 0.05)] */
+  --normal-text: #d8d8db; /* text color [default: #d8d8db] */
+  --muted-text: #aeaeb4; /* muted text color [default: #aeaeb4] */
+}
+
+/* DARK THEME */
+:is(.theme-darker, .theme-light .theme-darker) {
+  --background-shading: rgba(0, 0, 0, 0.6); /* app background shading color [default: rgba(0, 0, 0, 0.6)] */
+  --card-shading: rgba(0, 0, 0, 0.3); /* cards background shading color [default: rgba(0, 0, 0, 0.3)] */
+  --popout-shading: rgba(0, 0, 0, 0.7); /* popouts background shading color [default: rgba(0, 0, 0, 0.7)] */
+  --modal-shading: rgba(0, 0, 0, 0.5); /* modals background shading color [default: rgba(0, 0, 0, 0.6)] */
+  --input-shading: rgba(255, 255, 255, 0.05); /* inputs background shading color [default: rgba(255, 255, 255, 0.05)] */
+  --normal-text: var(--main-text-color); /* text color [default: #fbfbfb] */
+  --muted-text: #94949c; /* muted text color [default: #94949c] */
+}
+
+/* ONYX THEME */
+:is(.theme-midnight, .theme-light .theme-midnight) {
+  --background-shading: rgba(0, 0, 0, 0.8); /* app background shading color [default: rgba(0, 0, 0, 0.8)] */
+  --card-shading: rgba(0, 0, 0, 0.4); /* cards background shading color [default: rgba(0, 0, 0, 0.4)] */
+  --popout-shading: rgba(0, 0, 0, 0.8); /* popouts background shading color [default: rgba(0, 0, 0, 0.8)] */
+  --modal-shading: rgba(0, 0, 0, 0.6); /* modals background shading color [default: rgba(0, 0, 0, 0.6)] */
+  --input-shading: rgba(255, 255, 255, 0.05); /* inputs background shading color [default: rgba(255, 255, 255, 0.05)] */
+  --normal-text: var(--main-text-color); /* text color [default: #dcdcde] */
+  --muted-text: #86868e; /* muted text color [default: #86868e] */
+}
+
+/* ADD ADDITIONAL CSS BELOW HERE */
+
+:is(.theme-dark,.theme-light):not(.platform-osx) .leading_c38106::before {
+    content:"DeniaCord";
+    position:static;
+    margin-left:10px;
+    font-size:16px;
+    font-weight:600;
+    color:var(--text-default);
+    order:2;
+    filter:drop-shadow(0 0 5px var(--hsl-main-color))
+}
+
+:is(.theme-dark,.theme-light):not(.platform-osx) .leading_c38106::after {
+    content:"23.06.2026";
+    position:static;
+    margin-top:-5px;
+    margin-left:5px;
+    font-family:var(--code-font);
+    font-size:11px;
+    font-weight:600;
+    color:var(--text-muted);
+    order:3
+}
+
+
+:is(.wrapper_f61d60, .botText__82f07, .lookFilled__201d5.colorBrand__201d5) {
+  color: var(--accent-dark);
+}
+
+.buttonChildren_a22cb0 > span, .numberBadge__2b1f5,
+[class="live_a7acae liveSmall_a7acae eyebrow_a7acae textBadge__2b1f5 base__2b1f5 eyebrow__2b1f5 liveShapeRound_a7acae"],
+.liveIndicator__30845 > div
+{
+  color: var(--accent-dark);
+}
+
+[class="anchor_edefb8 anchorUnderlineOnHover_edefb8"] {
+  color: var(--link-text-color);
+}
+
+.button_a22cb0,
+.centerButton_f1ceac.colorable_f1ceac.join_f1ceac.fullRegionButton_f1ceac.button__201d5.lookBlank__201d5.colorBrand__201d5 
+{
+  background-color: var(--accent-light);
+}
+
+.centerButton_f1ceac.colorable_f1ceac.disconnect_f1ceac.fullRegionButton_f1ceac.button__201d5.lookBlank__201d5.colorBrand__201d5 {
+  background-color: var(--accent-dark);
+}
+
+.botTagVerified__82f07 > path, .buttonChildren_a22cb0 > svg > path,
+[class="iconItem_c69b6d iconBase_c69b6d iconWithChannelInfo_c69b6d"] > svg path,
+[class="iconItem_c69b6d iconBase_c69b6d"] > svg.actionIcon_c69b6d > path,
+.centerButton_f1ceac.colorable_f1ceac.join_f1ceac.fullRegionButton_f1ceac.button__201d5.lookBlank__201d5.colorBrand__201d5 > div > svg > path
+{
+  fill: var(--accent-dark);
+}
+
+.centerButton_f1ceac.colorable_f1ceac.disconnect_f1ceac.fullRegionButton_f1ceac.button__201d5.lookBlank__201d5.colorBrand__201d5 > div > svg > path {
+  fill: var(--accent-light);
+}
+
+
+
+
+
