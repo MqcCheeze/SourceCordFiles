@@ -153,7 +153,7 @@
 }
 
 [class="anchor_edefb8 anchorUnderlineOnHover_edefb8"] {
-  color: var(--link-text-color);
+  color: var(--link-text-color) !important; 
 }
 
 .button_a22cb0,
