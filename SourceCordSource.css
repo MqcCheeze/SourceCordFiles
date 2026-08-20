@@ -181,7 +181,7 @@
 }
 
 .title_edbb22 > [class="defaultColor__4bd52 lineClamp1__4bd52 text-sm/medium_cf4812"] {
-  content: var(--direct-messages-text);
+  textContent: var(--direct-messages-text);
 }
 
 
