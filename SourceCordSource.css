@@ -69,7 +69,6 @@
   --focus-color: var(--main-color); /* outline when pressing TAB key [default: var(--main-color)] */
   --interactive-text-active: var(--accent-dark);
   /* OTHER */
-  --direct-message-icon: url(about:blank); /* home button icon (link must be HTTPS) [default: url(https://clearvision.github.io/icons/discord.svg)]*/
 
 }
 
@@ -179,12 +178,4 @@
 
 .centerButton_f1ceac.colorable_f1ceac.disconnect_f1ceac.fullRegionButton_f1ceac.button__201d5.lookBlank__201d5.colorBrand__201d5 > div > svg > path {
   fill: var(--accent-light);
-}
-
-.title_edbb22 > svg {
-    background: var(--direct-message-icon) center / contain no-repeat;
-}
-
-.title_edbb22 > svg > path {
-    display: none;
 }
