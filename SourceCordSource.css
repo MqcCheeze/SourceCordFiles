@@ -182,7 +182,7 @@
   fill: var(--accent-light);
 }
 
-.title_edbb22 > :has(.defaultColor__4bd52) {
+.title_edbb22 > div {
     content: "waves";
 }
 
