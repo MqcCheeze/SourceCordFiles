@@ -68,6 +68,8 @@
   /* ACCESSIBILITY */
   --focus-color: var(--main-color); /* outline when pressing TAB key [default: var(--main-color)] */
   --interactive-text-active: var(--accent-dark);
+  /* OTHER */
+  --direct-messages-text: "Direct Messages"; /* text for the direct messages section [default: "Direct Messages"] */
 }
 
 /* THEME SPECIFIC SHADING */
@@ -178,6 +180,9 @@
   fill: var(--accent-light);
 }
 
+.title_edbb22 > [class="defaultColor__4bd52 lineClamp1__4bd52 text-sm/medium_cf4812"] {
+  content: var(--direct-messages-text);
+}
 
 
 
