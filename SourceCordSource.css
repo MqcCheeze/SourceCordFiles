@@ -69,7 +69,7 @@
   --focus-color: var(--main-color); /* outline when pressing TAB key [default: var(--main-color)] */
   --interactive-text-active: var(--accent-dark);
   /* OTHER */
-  --direct-message-text: "Direct Messages";
+  --direct-message-text: "WavesLine";
   --direct-message-icon: url(about:blank); /* home button icon (link must be HTTPS) [default: url(https://clearvision.github.io/icons/discord.svg)]*/
 
 }
