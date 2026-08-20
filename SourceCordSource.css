@@ -183,9 +183,13 @@
 }
 
 .title_edbb22 > div {
-    content: "waves";
+    font-size: 0;
 }
 
+.title_edbb22 > div::after {
+    content: var(--direct-message-text);
+    font-size: 14px;
+}
 
 .title_edbb22 > svg {
     background: var(--direct-message-icon) center / contain no-repeat;
