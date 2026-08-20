@@ -186,10 +186,6 @@
     content: var(--direct-message-text);
 }
 
-.title_edbb22 > div {
-    content: var(--direct-message-text);
-}
-
 .title_edbb22 > svg {
     background: var(--direct-message-icon) center / contain no-repeat;
 }
