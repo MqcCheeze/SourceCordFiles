@@ -69,7 +69,7 @@
   --focus-color: var(--main-color); /* outline when pressing TAB key [default: var(--main-color)] */
   --interactive-text-active: var(--accent-dark);
   /* OTHER */
-  --direct-message-text: "WavesLine";
+  --direct-message-text: "Direct Messages";
   --direct-message-icon: url(about:blank); /* home button icon (link must be HTTPS) [default: url(https://clearvision.github.io/icons/discord.svg)]*/
 
 }
@@ -182,9 +182,10 @@
   fill: var(--accent-light);
 }
 
-.title_edbb22 > div {
-    content: var(--direct-message-text);
+.title_edbb22 > :has(.defaultColor__4bd52) {
+    content: "waves";
 }
+
 
 .title_edbb22 > svg {
     background: var(--direct-message-icon) center / contain no-repeat;
