@@ -292,7 +292,7 @@
 .numberBadge__2b1f5,
 [class="live_a7acae liveSmall_a7acae eyebrow_a7acae textBadge__2b1f5 base__2b1f5 eyebrow__2b1f5 liveShapeRound_a7acae"],
 .liveIndicator__30845 > div {
-  color: var(--accent-dark);
+  color: #0f0 /*var(--accent-dark)*/;
 }
 
 [class="anchor_edefb8 anchorUnderlineOnHover_edefb8"] {
