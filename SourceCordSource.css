@@ -285,7 +285,7 @@
 }
 
 :is(.wrapper_f61d60, .botText__82f07, .lookFilled__201d5.colorBrand__201d5) {
-  color: var(--accent-dark);
+  color: #0f0 /*var(--accent-dark)*/;
 }
 
 .buttonChildren_a22cb0 > span,
